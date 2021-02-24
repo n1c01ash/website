@@ -4,7 +4,7 @@
 
 /// Regular font family
 /// @type List
-$text-font-stack: "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
+$text-font-stack: "Montserrat", "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
 
 /// Code (monospace) font family
 /// @type List
@@ -12,28 +12,45 @@ $code-font-stack: "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono",
 
 /// Copy text color
 /// @type Color
-$text-color: rgb(34, 34, 34) !default
+$color-text: rgb(34, 34, 34) !default
 
-/// Main brand color
+/// Brand Color Light
 /// @type Color
-$brand-color: rgb(229, 0, 80) !default
+$color-brand-light: #FF7900 !default
+
+/// Brand Color Dark
+/// @type Color
+$color-brand-dark: #1D1D1D !default
 
 /// Light grey
 /// @type Color
-$light-grey: rgb(237, 237, 237) !default
+$color-light-grey: rgb(237, 237, 237) !default
 
 /// Medium grey
 /// @type Color
-$mid-grey: rgb(153, 153, 153) !default
+$color-mid-grey: rgb(153, 153, 153) !default
 
 /// Dark grey
 /// @type Color
-$dark-grey: rgb(68, 68, 68) !default
+$color-dark-grey: rgb(68, 68, 68) !default
 
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default
 
+/// Header's height
+/// @type Length
+$header-height: 112px
+
+/// Hamburger menu specs
+/// @type Length
+$menu-width: 40px
+$menu-item-height: 5px
+
+// Golden ratio
+$golden-ratio: 1.618
+
+	
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels

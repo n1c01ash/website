@@ -1,0 +1,17 @@
+.menu
+	display: block
+	position: relative
+	background-color: $color-brand-light
+	width: $menu-width
+	height: $menu-width / $golden-ratio
+	cursor: pointer
+	grid-column-start: 2
+
+	&::after
+		top: $menu-item-height
+		@extend %menu-item-style
+
+	&::before
+		bottom: $menu-item-height
+
+		@extend %menu-item-style
