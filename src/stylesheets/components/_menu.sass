@@ -1,11 +1,17 @@
 .menu
 	display: block
-	position: relative
-	background-color: $color-brand-light
+	position: absolute
+	z-index: 1 
+	top: 40px
+	left: 40px
 	width: $menu-width
 	height: $menu-width / $golden-ratio
-	cursor: pointer
 	grid-column-start: 2
+
+	transform-origin: top left
+	background-color: $color-brand-light
+	cursor: pointer
+	transition: all 250ms ease
 
 	&::after
 		top: $menu-item-height
@@ -13,5 +19,26 @@
 
 	&::before
 		bottom: $menu-item-height
-
 		@extend %menu-item-style
+	
+	&-toggle:checked ~ .nav
+		display: grid
+
+	&-toggle:checked ~ .menu
+		position: absolute
+		height: 100%
+		width: 100%
+		z-index: 0
+		top: 0
+		left: 0
+
+		&::after,
+		&::before
+			width: 40px
+			top: 50px
+			left: 40px	
+
+		&::after
+			transform: rotateZ(45deg)
+		&::before
+			transform: rotateZ(-45deg)
